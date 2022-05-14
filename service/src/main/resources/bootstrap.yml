@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+      config:
+        server-addr: localhost:8848
+        namespace: a59582e8-516d-4eb6-9fb0-810c464121dd
+        file-extension: yaml
+        group: GROUP1
+        enabled: true
+        prefix: backend
+  application:
+    name: backend
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
