@@ -1,17 +1,10 @@
 spring:
   cloud:
     nacos:
-      discovery:
       config:
-        server-addr: localhost:8848
-        namespace: a59582e8-516d-4eb6-9fb0-810c464121dd
+        server-addr: 127.0.0.1:8848
         file-extension: yaml
-        group: GROUP1
-        enabled: true
-        prefix: backend
   application:
-    name: backend
+    name: user
   profiles:
     active: dev
-  main:
-    allow-bean-definition-overriding: true
