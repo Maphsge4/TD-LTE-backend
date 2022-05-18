@@ -12,8 +12,8 @@ import java.util.List;
  *  服务类
  * </p>
  *
- * @author dylanhz
- * @since 2021-06-15
+ * @author machenxiang
+ * @since 2022-04-17
  */
 public interface TbCellKPIService extends IService<TbCellKPI> {
     void saveTbCellKPI(MultipartFile file);

@@ -19,8 +19,8 @@ import java.util.List;
  * 服务实现类
  * </p>
  *
- * @author dylanhz
- * @since 2021-06-14
+ * @author machenxiang
+ * @since 2022-04-17
  */
 @Service
 public class TbCellServiceImpl extends ServiceImpl<TbCellMapper, TbCell> implements TbCellService {
@@ -30,6 +30,7 @@ public class TbCellServiceImpl extends ServiceImpl<TbCellMapper, TbCell> impleme
         try {
             InputStream in = file.getInputStream();
             EasyExcel.read(in, TbCellData.class, new TbCellExcelListener(this)).sheet().doRead();
+//            EasyExcel.read(in, TbCell.class, new TbCellExcelListener(this)).sheet().doRead();
         } catch (Exception e) {
         }
     }

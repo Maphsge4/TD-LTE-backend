@@ -19,14 +19,17 @@ public class TbCellExcelListener extends AnalysisEventListener<TbCellData> {
     private final List<TbCellData> tbCellDataList;
     private final Integer batchSize;
     private final Logger logger;
+    private Integer i;
 
     public TbCellExcelListener(TbCellService _tbCellService) throws IOException {
+        this.i = 0;
         this.tbCellService = _tbCellService;
         tbCellDataList = new ArrayList<>();
         batchSize = 7000;
         FileHandler handler = new FileHandler("tbCellImport.log");
         handler.setFormatter(new SimpleFormatter());
         logger = Logger.getLogger("tbCellImport");
+        logger.info("test test test ");
         logger.addHandler(handler);
     }
 
@@ -43,12 +46,15 @@ public class TbCellExcelListener extends AnalysisEventListener<TbCellData> {
 
     @Override
     public void invoke(TbCellData tbCellData, AnalysisContext analysisContext) {
+        tbCellData.setId(i);
+        i += 1;
         if (tbCellData.check()) {
             tbCellDataList.add(tbCellData);
             if (tbCellDataList.size() >= batchSize) {
                 tbCellService.insertBatch(tbCellDataList);
                 tbCellDataList.clear();
             }
+            logger.info("legal record! Sector_ID : " + tbCellData.getSectorId());
         } else {
             logger.info("Illegal record! Sector_ID : " + tbCellData.getSectorId());
         }

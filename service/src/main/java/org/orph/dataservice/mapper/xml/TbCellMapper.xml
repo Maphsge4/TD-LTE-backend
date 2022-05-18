@@ -7,7 +7,7 @@
         VALUES
         <foreach collection="list" item="tbcell" separator=",">
             (
-            null,
+            #{tbcell.id},
             #{tbcell.city},
             #{tbcell.sectorId},
             #{tbcell.sectorName},

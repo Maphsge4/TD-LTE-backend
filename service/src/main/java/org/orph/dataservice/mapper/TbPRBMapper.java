@@ -13,8 +13,8 @@ import java.util.List;
  *  Mapper 接口
  * </p>
  *
- * @author dylanhz
- * @since 2021-06-15
+ * @author machenxiang
+ * @since 2022-04-17
  */
 @Mapper
 public interface TbPRBMapper extends BaseMapper<TbPRB> {

@@ -2,7 +2,9 @@ package org.orph.dataservice.importData;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * <p>
@@ -13,7 +15,11 @@ import lombok.Data;
  * @since 2021-06-09
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor  // 一定要有无参构造方法
 public class TbCellData {
+
+    private Integer id;
 
     @ExcelProperty(index = 0)
     private String city;

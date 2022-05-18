@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //import com.alibaba.nacos.api.config.annotation.NacosValue;
 //import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
 
-@MapperScan("org.orph.dataservice.mapper")
+//@MapperScan("org.orph.dataservice.mapper")
 @SpringBootApplication
 //@NacosPropertySource(dataId = "bamboo.test", autoRefreshed = true)
 public class Application {

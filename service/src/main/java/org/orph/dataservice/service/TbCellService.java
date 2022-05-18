@@ -12,8 +12,8 @@ import java.util.List;
  * 服务类
  * </p>
  *
- * @author dylanhz
- * @since 2021-06-14
+ * @author machenxiang
+ * @since 2022-04-17
  */
 public interface TbCellService extends IService<TbCell> {
     void saveTbCell(MultipartFile file);
