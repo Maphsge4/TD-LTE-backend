@@ -129,4 +129,14 @@ public class TbCell implements Serializable {
     @ExcelProperty(index = 18)
     private Float totletilt;
 
+    public boolean check() {
+        if (sectorName == null || enodebName == null || enodebid == null
+                || earfcn == null || longitude == null || latitude == null
+                || azimuth == null || totletilt == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 }

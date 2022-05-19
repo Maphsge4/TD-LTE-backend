@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author machenxiang
@@ -18,5 +18,5 @@ import java.util.List;
  */
 @Mapper
 public interface TbCellMapper extends BaseMapper<TbCell> {
-    void insertBatch(@Param(value="list")List<TbCellData>list);
+    void insertBatch(@Param(value = "list") List<TbCell> list);
 }

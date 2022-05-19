@@ -39,7 +39,33 @@ public class TbCellServiceImpl extends ServiceImpl<TbCellMapper, TbCell> impleme
     TbCellMapper tbCellMapper;
 
     @Override
-    public void insertBatch(List<TbCellData> list) {
+    public void insertBatch(List<TbCell> list) {
         tbCellMapper.insertBatch(list);
+    }
+
+    @Override
+    public TbCell construct(TbCellData tbCellData){
+        TbCell tbCell = new TbCell();
+        tbCell.setId(tbCellData.getId());
+        tbCell.setCity(tbCellData.getCity());
+        tbCell.setSectorId(tbCellData.getSectorId());
+        tbCell.setEnodebid(tbCellData.getEnodebid());
+        tbCell.setSectorName(tbCellData.getSectorName());
+        tbCell.setEnodebName(tbCellData.getEnodebName());
+        tbCell.setEarfcn(tbCellData.getEarfcn());
+        tbCell.setPci(tbCellData.getPci());
+        tbCell.setPss(tbCellData.getPss());
+        tbCell.setSss(tbCellData.getSss());
+        tbCell.setTac(tbCellData.getTac());
+        tbCell.setVendor(tbCellData.getVendor());
+        tbCell.setLongitude(tbCellData.getLongitude());
+        tbCell.setLatitude(tbCellData.getLatitude());
+        tbCell.setStyle(tbCellData.getStyle());
+        tbCell.setAzimuth(tbCellData.getAzimuth());
+        tbCell.setElecttilt(tbCellData.getElecttilt());
+        tbCell.setHeight(tbCellData.getHeight());
+        tbCell.setMechtilt(tbCellData.getMechtilt());
+        tbCell.setTotletilt(tbCellData.getTotletilt());
+        return tbCell;
     }
 }

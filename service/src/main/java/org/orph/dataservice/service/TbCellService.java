@@ -18,5 +18,7 @@ import java.util.List;
 public interface TbCellService extends IService<TbCell> {
     void saveTbCell(MultipartFile file);
 
-    void insertBatch(List<TbCellData> list);
+    void insertBatch(List<TbCell> list);
+
+    TbCell construct(TbCellData tbCellData);
 }

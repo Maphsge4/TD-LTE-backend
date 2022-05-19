@@ -21,7 +21,7 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  mapper-locations: classpath:org/orph/dataservice/mapper/xml/**.xml
+  mapper-locations: classpath:**/mapper/xml/*.xml
 
 
 

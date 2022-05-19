@@ -3,6 +3,7 @@ package org.orph.dataservice.listener;
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 import com.alibaba.excel.exception.ExcelDataConvertException;
+import org.orph.dataservice.entity.TbCell;
 import org.orph.dataservice.importData.TbCellData;
 import org.orph.dataservice.service.TbCellService;
 
@@ -16,7 +17,7 @@ import java.util.logging.SimpleFormatter;
 public class TbCellExcelListener extends AnalysisEventListener<TbCellData> {
 
     private final TbCellService tbCellService;
-    private final List<TbCellData> tbCellDataList;
+    private final List<TbCell> tbCellDataList;
     private final Integer batchSize;
     private final Logger logger;
     private Integer i;
@@ -29,7 +30,7 @@ public class TbCellExcelListener extends AnalysisEventListener<TbCellData> {
         FileHandler handler = new FileHandler("tbCellImport.log");
         handler.setFormatter(new SimpleFormatter());
         logger = Logger.getLogger("tbCellImport");
-        logger.info("test test test ");
+        logger.info("test test test ");//
         logger.addHandler(handler);
     }
 
@@ -46,10 +47,11 @@ public class TbCellExcelListener extends AnalysisEventListener<TbCellData> {
 
     @Override
     public void invoke(TbCellData tbCellData, AnalysisContext analysisContext) {
-        tbCellData.setId(i);
         i += 1;
+        tbCellData.setId(i);
         if (tbCellData.check()) {
-            tbCellDataList.add(tbCellData);
+            TbCell tbCell = tbCellService.construct(tbCellData);
+            tbCellDataList.add(tbCell);
             if (tbCellDataList.size() >= batchSize) {
                 tbCellService.insertBatch(tbCellDataList);
                 tbCellDataList.clear();

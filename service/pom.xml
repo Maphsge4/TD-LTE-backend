@@ -32,9 +32,10 @@
     <build>
         <resources>
             <resource>
-                <directory>src/main/java/org/orph/dataservice/mapper/xml</directory>
+                <directory>src/main/java</directory>
                 <includes>
-                    <include>**.xml</include>
+                    <include>**/*.yml</include>
+                    <include>**/*.xml</include>
                 </includes>
             </resource>
         </resources>

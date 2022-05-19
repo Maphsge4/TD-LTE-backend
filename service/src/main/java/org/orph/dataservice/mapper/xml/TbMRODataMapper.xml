@@ -2,23 +2,4 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.orph.dataservice.mapper.TbMRODataMapper">
 
-    <insert id="insertBatch" parameterType="java.util.List">
-        REPLACE INTO tbmrodata
-        VALUES
-        <foreach collection="list" item="tbmrodata" separator=",">
-            (
-            null,
-            #{tbmrodata.timeStamp},
-            #{tbmrodata.servingSector},
-            #{tbmrodata.interferingSector},
-            #{tbmrodata.lteScRSRP},
-            #{tbmrodata.lteNcRSRP},
-            #{tbmrodata.lteNcEarfcn},
-            #{tbmrodata.lteNcPci},
-            #{tbmrodata.rsrpDiff},
-            )
-        </foreach>
-    </insert>
-
-
 </mapper>
