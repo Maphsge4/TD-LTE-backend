@@ -33,7 +33,7 @@ public class SwaggerConfig {
                 .title("数据库后端API文档")
                 .description("本文档描述了数据库管理系统后端服务接口定义")
                 .version("1.0")
-                .contact(new Contact("java", "？", "？"))
+//                .contact(new Contact("java", "？", "？"))
                 .build();
     }
 }

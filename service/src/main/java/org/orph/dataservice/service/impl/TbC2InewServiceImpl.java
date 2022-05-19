@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
  *  服务实现类
  * </p>
  *
- * @author dylanhz
- * @since 2021-06-15
+ * @author machenxiang
+ * @since 2022-04-17
  */
 @Service
 public class TbC2InewServiceImpl extends ServiceImpl<TbC2InewMapper, TbC2Inew> implements TbC2InewService {

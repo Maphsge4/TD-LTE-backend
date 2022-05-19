@@ -21,8 +21,8 @@ import java.util.List;
  * 服务实现类
  * </p>
  *
- * @author dylanhz
- * @since 2021-06-15
+ * @author machenxiang
+ * @since 2022-04-17
  */
 @Service
 public class TbPRBServiceImpl extends ServiceImpl<TbPRBMapper, TbPRB> implements TbPRBService {

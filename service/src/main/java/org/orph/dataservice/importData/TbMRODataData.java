@@ -3,6 +3,15 @@ package org.orph.dataservice.importData;
 import com.alibaba.excel.annotation.ExcelProperty;
 import lombok.Data;
 
+/**
+ * <p>
+ *
+ * </p>
+ *
+ * @author gaoyuan
+ * @since 2022-04-17
+ */
+
 @Data
 public class TbMRODataData {
 // CSDN说对应实体类的成员变量名不能有大写字母，我只是把首字母变成了小写，就成功

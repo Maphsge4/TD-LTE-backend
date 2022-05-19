@@ -3,6 +3,15 @@ package org.orph.dataservice.importData;
 import com.alibaba.excel.annotation.ExcelProperty;
 import lombok.Data;
 
+/**
+ * <p>
+ *
+ * </p>
+ *
+ * @author gaoyuan
+ * @since 2022-04-17
+ */
+
 @Data
 public class TbCellKPIData {
 
