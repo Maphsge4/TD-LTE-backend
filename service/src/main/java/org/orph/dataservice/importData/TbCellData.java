@@ -6,14 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * <p>
- *
- * </p>
- *
- * @author gaoyuan
- * @since 2022-04-17
- */
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor  // 一定要有无参构造方法
